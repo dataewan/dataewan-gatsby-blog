@@ -6,6 +6,7 @@ import BlockQuote from "../components/blockquote"
 import Section from "../components/section"
 import Subsection from "../components/subsection"
 import Code from "../components/code"
+import Figure from "../components/figure"
 
 const IndexPage = () => (
   <Section name="Hi People">
@@ -31,6 +32,9 @@ const IndexPage = () => (
     <Code language="python">
       print(1+2)
     </Code>
+    <Figure caption="Some fun dinos" fullwidth={false}>
+      <img src="https://lh3.googleusercontent.com/cwK3uuCsmzM3SXyyQ8Id7VhYaz7rvi5zkX8rPHrJzxGgEamFkeBxpgQUIlA6JduZDWgT5JxO3i8dsUNbODcEsnkIuNp_47cjw0p6CI7BuUTSom9S8I0LGNnFlaTGkol8Q5M1T14gZuVzcIKpP73Jkeix2ASiiVngAjvjiTghdJQ5hGJfoYn4RX6wVX0FYCswf08K_k5pDTfP5l0PZ1Ra68zM1QIKzpADKA-LUI3ULfVPwdThrAM4Map3fTjHBHRNdqIIS5Bws-KzRX1xhnIVri_Ewc9vsFEHEfJjf59xfmEKYKg64ugm4YefKCTN6nYEsfGwKdZZzMNaDH4JBptINzI8SLEkIiy2vqyiJ0X-UQ3NPUjrqLSokQSdzsgkDfVcOkuqvDwHz6rWKYzwF80ZDBo23nwK513OvKK4pUw_HrKw-jJwfug5Tr-9n13Z_AdYDUGUC75uxe9VMRRVTyd-mmdMo5c5hpX7trMOI622cJHjc8L3A-Yfr1zNZDLYw4eEyKRYFxmo0Vk7JZfjr3i4Pscd8iqzasAHhB9sBiv2ymZDTrCl98fIc6ZDlRrwh4cRcw7WfyMKmeB5udkV_CHCWZZoAzK2HFGFWnM0x593cAkzLU9UUFmCdB_LHl8gbzKwDoEe-DYz2_xKB0zR2UJgTfEMQqYV9Om4n3Y=w2068-h1550-no" />
+    </Figure>
   </Section>
 )
 
