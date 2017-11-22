@@ -1,12 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import Paragraph from "../components/paragraph"
-import BlockQuote from "../components/blockquote"
-import Section from "../components/section"
-import Subsection from "../components/subsection"
-import Code from "../components/code"
-import Figure from "../components/figure"
+import {Paragraph, BlockQuote, Section, Subsection, Code, Figure} from '../components'
 
 const IndexPage = () => (
   <Section name="Hi People">
