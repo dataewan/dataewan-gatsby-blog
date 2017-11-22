@@ -1,24 +1,26 @@
 import React, { Component} from 'react';
 import Constants from './constants'
-
-require('prismjs/themes/prism-solarizedlight.css')
+import SyntaxHighlighter from 'react-syntax-highlighter/prism';
+import { coy } from 'react-syntax-highlighter/styles/prism';
 
 class Code extends Component {
 
   render() {
     const language = this.props.language;
     return (
-      <div className="gatsby-highlight"
+      <pre 
         css={{
           width: Constants.leftwidth,
+          paddingLeft: -5,
+          marginLeft: `-5rem`,
         }}
       >
-        <pre className = {`language-${language}`}>
-          <code>
-            {this.props.children}
-          </code>
-        </pre>
-      </div>
+        <SyntaxHighlighter 
+          language={language}
+          style={coy}>
+          {this.props.code}
+        </SyntaxHighlighter>
+      </pre>
     );
   }
 }

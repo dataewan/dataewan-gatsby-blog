@@ -11,3 +11,8 @@ h6.figurelabel:before{
    counter-increment: figure;
    content: "Figure " counter(figure);
 }
+
+span.mono{
+    white-space: pre;
+    font-family: monospace;
+}

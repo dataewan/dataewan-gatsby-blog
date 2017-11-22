@@ -4,6 +4,9 @@ import Figure from './figure'
 import Paragraph from './paragraph'
 import Section from './section'
 import Subsection from './subsection'
+import Subsubsection from './subsubsection'
+import Linktree from './Linktree'
+import Linknode from './Linknode'
 
 module.exports = {
   BlockQuote,
@@ -11,5 +14,8 @@ module.exports = {
   Figure,
   Paragraph,
   Section,
-  Subsection
+  Subsection,
+  Subsubsection,
+  Linktree,
+  Linknode,
 }

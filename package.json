@@ -11,7 +11,8 @@
     "gatsby-plugin-typography": "^1.7.10",
     "gatsby-remark-prismjs": "^1.2.9",
     "gatsby-transformer-remark": "^1.7.21",
-    "prismjs": "^1.8.4"
+    "prismjs": "^1.8.4",
+    "react-syntax-highlighter": "^6.0.4"
   },
   "keywords": [
     "gatsby"
