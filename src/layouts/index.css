@@ -4,5 +4,10 @@ body{
    margin-right: auto;
    padding-left: 12.5%;
    max-width: 1400px;
-   counter-reset: sidenote-counter;
+   counter-reset: figure;
+}
+
+h6.figurelabel:before{
+   counter-increment: figure;
+   content: "Figure " counter(figure);
 }

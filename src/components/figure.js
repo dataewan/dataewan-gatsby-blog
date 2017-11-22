@@ -12,6 +12,7 @@ class Figure extends Component {
             width: Constants.rightwidth, 
             float: `right`, 
             ...scale(Constants.smallscale), }}> 
+            <h6 className='figurelabel'></h6>
             {this.props.caption} 
         </figcaption>
       )
@@ -21,6 +22,7 @@ class Figure extends Component {
           css={{ 
             width: Constants.leftwidth, 
             ...scale(Constants.smallscale), }}> 
+            <h6 className='figurelabel'></h6>
             {this.props.caption} 
         </figcaption>
       )
