@@ -11,6 +11,7 @@ const IndexPage = () => (
   <Section name="Hi People">
     <Paragraph>
       Ball tip ribeye meatloaf boudin spare ribs kielbasa chicken turkey bacon. Cupim buffalo kevin boudin, shoulder ground round beef ribs brisket tail frankfurter hamburger bresaola chicken. Rump beef ribs ham pork loin, ribeye pancetta strip steak swine drumstick ham hock pastrami. Prosciutto shank rump pork loin.
+      <a href="#herewego">section</a>
     </Paragraph>
     <Paragraph note="Can I do this with multilines? What
       happens if I make it even longer
