@@ -11,7 +11,7 @@ class Subsection extends Component {
     const name = this.getName()
     return (
       <section>
-        <h2 id={name}>{this.props.name}</h2>
+        <h3 id={name}>{this.props.name}</h3>
         {this.props.children}
       </section>
     );
