@@ -1,11 +1,11 @@
 import React, { Component} from 'react';
 import PropTypes from 'prop-types';
 
-import typography from "../../utils/typography"
+import typography from "../../../utils/typography"
 
 import {
   Section, Subsection, Paragraph, Figure, Code, BlockQuote, Linktree, Linknode
-}from "../../components"
+}from "../../../components"
 
 class IndexPage extends Component {
   render() {

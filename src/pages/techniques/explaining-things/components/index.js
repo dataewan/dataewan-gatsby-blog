@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 
 import {
   Section, Subsection, Subsubsection, Paragraph, Figure, Code, BlockQuote, Linktree, Linknode
-}from "../../components"
+}from "../../../../components"
 
 
 class ComponentsPage extends Component {
