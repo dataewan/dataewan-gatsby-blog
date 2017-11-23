@@ -1,12 +1,19 @@
 import React, { Component} from 'react';
 import Link from 'gatsby-link'
 
+import Constants from './constants'
+
 class Linknode extends Component {
 
   render() {
     return (
-      <Link to={this.props.to}>
-        <li>{this.props.desc}</li>
+      <Link 
+        css={{
+          display: `block`,
+          color: Constants.darkblue,
+        }}
+        to={this.props.to}>
+        {this.props.desc}
       </Link>
     );
   }

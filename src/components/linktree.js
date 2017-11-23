@@ -1,12 +1,14 @@
 import React, { Component} from 'react';
 
+import Constants from './constants'
+
 class Linktree extends Component {
 
   render() {
     return (
-      <ul>
+      <nav>
         {this.props.children}
-      </ul>
+      </nav>
     );
   }
 }
