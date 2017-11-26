@@ -20,9 +20,9 @@ class ComponentsPage extends Component {
           </Paragraph>
           <Code language="javascript" code={
             `
-            <Section name='name of the section'>
-              --CONTENT GOES HERE--
-            </Section>
+<Section name='name of the section'>
+  --CONTENT GOES HERE--
+</Section>
             `} />
 
           <Paragraph>
@@ -41,9 +41,9 @@ class ComponentsPage extends Component {
           </Paragraph>
           <Code language="javascript" code={
             `
-            <Subsection name='name of the subsection'>
-              --CONTENT GOES HERE--
-            </Subsection>
+<Subsection name='name of the subsection'>
+  --CONTENT GOES HERE--
+</Subsection>
             `} />
           <Subsection name="Example subsection">
             Here is how a subsection looks.
@@ -57,9 +57,9 @@ class ComponentsPage extends Component {
           </Paragraph>
           <Code language="javascript" code={
             `
-            <Subsubsection name='name of the subsubection'>
-              --CONTENT GOES HERE--
-            </Subsubsection>
+<Subsubsection name='name of the subsubection'>
+  --CONTENT GOES HERE--
+</Subsubsection>
             `} />
           <Subsubsection name='Example subsubsection'>
             <Paragraph>
@@ -76,9 +76,9 @@ class ComponentsPage extends Component {
           </Paragraph>
           <Code language="javascript" code={
             `
-            <Paragraph note='a note that I want to put next to my paragraph'>
-              Here is the place where I put my text.
-            </Paragraph>
+<Paragraph note='a note that I want to put next to my paragraph'>
+  Here is the place where I put my text.
+</Paragraph>
             `} />
           <Paragraph note="Having the sidenotes next to the text makes life easier for the reader, you have to do less eye movement.">
             A useful feature is that you can put notes beside your paragraphs if you like.
@@ -100,11 +100,11 @@ class ComponentsPage extends Component {
           </Paragraph>
           <Code language="javascript" code={
             `
-            <Figure 
-              fullwidth={true}
-              caption="Caption for the figure">
-              --Content of the figure, for example an image--
-            </Figure>
+<Figure 
+  fullwidth={true}
+  caption="Caption for the figure">
+  --Content of the figure, for example an image--
+</Figure>
             `} />
           <Figure caption='Some dinosaurs having fun'>
             <img src="https://lh3.googleusercontent.com/cwK3uuCsmzM3SXyyQ8Id7VhYaz7rvi5zkX8rPHrJzxGgEamFkeBxpgQUIlA6JduZDWgT5JxO3i8dsUNbODcEsnkIuNp_47cjw0p6CI7BuUTSom9S8I0LGNnFlaTGkol8Q5M1T14gZuVzcIKpP73Jkeix2ASiiVngAjvjiTghdJQ5hGJfoYn4RX6wVX0FYCswf08K_k5pDTfP5l0PZ1Ra68zM1QIKzpADKA-LUI3ULfVPwdThrAM4Map3fTjHBHRNdqIIS5Bws-KzRX1xhnIVri_Ewc9vsFEHEfJjf59xfmEKYKg64ugm4YefKCTN6nYEsfGwKdZZzMNaDH4JBptINzI8SLEkIiy2vqyiJ0X-UQ3NPUjrqLSokQSdzsgkDfVcOkuqvDwHz6rWKYzwF80ZDBo23nwK513OvKK4pUw_HrKw-jJwfug5Tr-9n13Z_AdYDUGUC75uxe9VMRRVTyd-mmdMo5c5hpX7trMOI622cJHjc8L3A-Yfr1zNZDLYw4eEyKRYFxmo0Vk7JZfjr3i4Pscd8iqzasAHhB9sBiv2ymZDTrCl98fIc6ZDlRrwh4cRcw7WfyMKmeB5udkV_CHCWZZoAzK2HFGFWnM0x593cAkzLU9UUFmCdB_LHl8gbzKwDoEe-DYz2_xKB0zR2UJgTfEMQqYV9Om4n3Y=w2068-h1550-no" />
@@ -125,13 +125,13 @@ class ComponentsPage extends Component {
           </Paragraph>
           <Code language="javascript" code={
             `
-            <Code 
-              language='python'
-              code={\`
-              def showtime(x):
-                print(x)
-              \`}
-              />
+<Code 
+  language='python'
+  code={\`
+  def showtime(x):
+    print(x)
+  \`}
+  />
             `} />
           <Paragraph>
             That code would make something like this:
@@ -146,13 +146,13 @@ class ComponentsPage extends Component {
         <Section name='BlockQuote component'>
           <Code language="javascript" code={
             `
-            <BlockQuote 
-              source='https://en.wikiquote.org/wiki/Cat%27s_Cradle'
-              person="Kurt Vonegut, Cat's Cradle"
-              >
-              Dr. Hoenikker used to say that any scientist who couldn't
-              explain to an eight-year-old what he was doing was a charlatan.
-            </BlockQuote>
+<BlockQuote 
+  source='https://en.wikiquote.org/wiki/Cat%27s_Cradle'
+  person="Kurt Vonegut, Cat's Cradle"
+  >
+  Dr. Hoenikker used to say that any scientist who couldn't
+  explain to an eight-year-old what he was doing was a charlatan.
+</BlockQuote>
             `} />
           <Paragraph>
             Produces:
