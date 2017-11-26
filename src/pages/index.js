@@ -9,17 +9,27 @@ import {
 const IndexPage = () => (
   <Section name='Things I wish I could remember'>
     <Paragraph>
-      Written record of things that I know,
-      but that fall out of my head.
+      Written record of things have been in my head,
+      but that have fallen out.
     </Paragraph>
-    <Subsection name='Ways that I do things'>
+    <Subsection name='Techniques'>
+      <Paragraph>
+        Ways to do things.
+      </Paragraph>
       <Linktree>
         <Linknode to='techniques/explaining-things' desc='Explaining things' />
+        <Linknode to='techniques/programming' desc='Programming' />
       </Linktree>
     </Subsection>
     <Subsection name="Learning">
+      <Paragraph>
+        Learning things from books and other sources.
+      </Paragraph>
     </Subsection>
     <Subsection name="Investigating">
+      <Paragraph>
+        Learning by applying techniques.
+      </Paragraph>
     </Subsection>
   </Section>
 )

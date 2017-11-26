@@ -1,12 +1,15 @@
 import React, { Component} from 'react';
 
-import Constants from './constants'
+import { rhythm } from '../utils/typography'
 
 class Linktree extends Component {
 
   render() {
     return (
-      <nav>
+      <nav
+        css={{
+          paddingBottom: rhythm(2)
+        }}>
         {this.props.children}
       </nav>
     );

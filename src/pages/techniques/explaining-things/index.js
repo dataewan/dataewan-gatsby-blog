@@ -12,9 +12,11 @@ class IndexPage extends Component {
     console.log(typography)
     return (
       <article>
-        <Section name="Coding an explaination">
+        <Section name="This explaination format">
           <Paragraph>
-            I find using code to create these explainations a helpful technique.
+            I'm using this format to make explainations.
+            It uses <a href="https://reactjs.org/">react</a> and <a href="http://gatsbyjs.org/">gatsby.js</a> to explain things.
+            There are quite a few advantages of using this format.
             <ul css={{
               paddingTop: typography.rhythm(1)
             }}>
@@ -22,11 +24,16 @@ class IndexPage extends Component {
               <li>The explainations can be interactive. An explaination you can play with is often easier to understand</li>
               <li>They are accessible anywhere with an internet connection</li>
             </ul>
-            You do have to take more time to do things this way, but I like it a lot.
+          </Paragraph>
+          <Paragraph>
+            The downside is that it takes more time and effort to explain something using this format.
+            You're writing a lot of code.
+            I'm finding this quite good,
+            as it makes you think hard about what to include in the explaination.
           </Paragraph>
           <Linktree>
-            <Linknode to='/explaining-things/react' desc="Describing how to use react to explain a thing"/>
-            <Linknode to='/explaining-things/components' desc="Different components developed to help explain"/>
+            <Linknode to='/techniques/explaining-things/react' desc="Describing how I use react in this format"/>
+            <Linknode to='/techniques/explaining-things/components' desc="Different components developed to help explain"/>
           </Linktree>
         </Section>
       </article>
