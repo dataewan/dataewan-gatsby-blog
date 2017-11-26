@@ -11,8 +11,6 @@ class Code extends Component {
       <pre 
         css={{
           width: Constants.leftwidth,
-          paddingLeft: -5,
-          marginLeft: `-5rem`,
         }}
       >
         <SyntaxHighlighter 

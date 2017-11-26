@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "d3-array": "^1.2.1",
+    "d3-axis": "^1.0.8",
+    "d3-scale": "^1.0.7",
+    "d3-selection": "^1.2.0",
     "gatsby": "^1.9.119",
     "gatsby-link": "^1.6.28",
     "gatsby-plugin-glamor": "^1.6.8",
@@ -12,6 +16,7 @@
     "gatsby-remark-prismjs": "^1.2.9",
     "gatsby-transformer-remark": "^1.7.21",
     "prismjs": "^1.8.4",
+    "react-d3-axis": "^0.1.1",
     "react-syntax-highlighter": "^6.0.4"
   },
   "keywords": [

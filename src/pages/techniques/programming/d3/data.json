@@ -1,0 +1,62 @@
+[
+   {
+      "rank":1,
+      "title":"Beauty and the Beast",
+      "distributor":"Disney",
+      "gross":1263521126
+   },
+   {
+      "rank":2,
+      "title":"The Fate of the Furious",
+      "distributor":"Universal",
+      "gross":1239078381
+   },
+   {
+      "rank":3,
+      "title":"Despicable Me 3",
+      "distributor":"Universal",
+      "gross":1025164659
+   },
+   {
+      "rank":4,
+      "title":"Spider-Man: Homecoming",
+      "distributor":"Sony Pictures",
+      "gross":880132609
+   },
+   {
+      "rank":5,
+      "title":"Wolf Warrior 2",
+      "distributor":"United Entertainment",
+      "gross":870325439
+   },
+   {
+      "rank":6,
+      "title":"Guardians of the Galaxy Vol. 2",
+      "distributor":"Disney",
+      "gross":863564415
+   },
+   {
+      "rank":7,
+      "title":"Wonder Woman",
+      "distributor":"Warner Bros.",
+      "gross":821763408
+   },
+   {
+      "rank":8,
+      "title":"Pirates of the Caribbean: Dead Men Tell No Tales",
+      "distributor":"Disney",
+      "gross":794777455
+   },
+   {
+      "rank":9,
+      "title":"Thor: Ragnarok",
+      "distributor":"Disney",
+      "gross":745149643
+   },
+   {
+      "rank":10,
+      "title":"It",
+      "distributor":"Warner Bros.",
+      "gross":688043000
+   }
+]
