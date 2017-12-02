@@ -7,6 +7,7 @@ import Subsection from './subsection'
 import Subsubsection from './subsubsection'
 import Linktree from './Linktree'
 import Linknode from './Linknode'
+import RawHTML from './rawhtml'
 
 module.exports = {
   BlockQuote,
@@ -18,4 +19,5 @@ module.exports = {
   Subsubsection,
   Linktree,
   Linknode,
+  RawHTML,
 }
