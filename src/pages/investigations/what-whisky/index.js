@@ -36,7 +36,7 @@ class WhatWhiskyIndex extends React.Component {
 
       selectedColour: Constants.lightred,
       unselectedColour: Constants.darkred,
-      disabledpointfill: Constants.darkgrey,
+      disabledColour: Constants.lightgrey,
 
       radialOverall: Constants.darkyellow,
       radialFill: Constants.lightyellow,
@@ -141,6 +141,96 @@ class WhatWhiskyIndex extends React.Component {
           </Subsection>
         </Section>
         <Section name='Putting the whisky into groups'>
+          <Subsection name="Group 0">
+            <FormattedOverview
+              {...theme}
+              whisky={whisky}
+              selected={this.state.selected}
+              onHover={this.onHover}
+              cluster={'0'}
+              zoom={true}
+            />
+          </Subsection>
+          <Subsection name="Group 1">
+            <FormattedOverview
+              {...theme}
+              whisky={whisky}
+              selected={this.state.selected}
+              onHover={this.onHover}
+              cluster={'1'}
+              zoom={true}
+            />
+          </Subsection>
+          <Subsection name="Group 2">
+            <FormattedOverview
+              {...theme}
+              whisky={whisky}
+              selected={this.state.selected}
+              onHover={this.onHover}
+              cluster={'2'}
+              zoom={true}
+            />
+          </Subsection>
+          <Subsection name="Group 3">
+            <FormattedOverview
+              {...theme}
+              whisky={whisky}
+              selected={this.state.selected}
+              onHover={this.onHover}
+              cluster={'3'}
+              zoom={true}
+            />
+          </Subsection>
+          <Subsection name="Group 4">
+            <FormattedOverview
+              {...theme}
+              whisky={whisky}
+              selected={this.state.selected}
+              onHover={this.onHover}
+              cluster={'4'}
+              zoom={true}
+            />
+          </Subsection>
+          <Subsection name="Group 5">
+            <FormattedOverview
+              {...theme}
+              whisky={whisky}
+              selected={this.state.selected}
+              onHover={this.onHover}
+              cluster={'5'}
+              zoom={true}
+            />
+          </Subsection>
+          <Subsection name="Group 6">
+            <FormattedOverview
+              {...theme}
+              whisky={whisky}
+              selected={this.state.selected}
+              onHover={this.onHover}
+              cluster={'6'}
+              zoom={true}
+            />
+          </Subsection>
+          <Subsection name="Group 7">
+            <FormattedOverview
+              {...theme}
+              whisky={whisky}
+              selected={this.state.selected}
+              onHover={this.onHover}
+              cluster={'7'}
+              zoom={true}
+            />
+          </Subsection>
+          <Subsection name="Group 8">
+            <FormattedOverview
+              {...theme}
+              whisky={whisky}
+              selected={this.state.selected}
+              onHover={this.onHover}
+              cluster={'8'}
+              zoom={true}
+            />
+          </Subsection>
         </Section>
       </article>
     );

@@ -13,40 +13,77 @@ class FormattedOverview extends React.Component {
       rotate1: this.props.rotate1,
       scale: this.props.scale,
       spey: this.props.spey,
+      zoomlevel: this.props.zoomlevel ? this.props.zoomlevel: 'scotland'
     }
+    this.zoomOut = this.zoomOut.bind(this)
+    this.zoomSpey = this.zoomSpey.bind(this)
+    this.zoomIslay = this.zoomIslay.bind(this)
   }
 
   zoomSpey(e){
-    console.log('spey')
     this.setState({
       rotate0: 3.93,
       rotate1: 0.5,
       scale: 24800,
-      spey: true
+      spey: true,
+      zoomlevel: 'spey',
     })
   }
 
   zoomIslay(e){
-    console.log('islay')
     this.setState({
       rotate0: 6.25,
       rotate1: 1.92,
       scale: 57400,
-      spey: false
+      spey: false,
+      zoomlevel: 'islay'
     })
   }
 
   zoomOut(e){
-    console.log("ZOOMING")
     this.setState({
       rotate0: 4.4,
       rotate1: 0,
       scale: 7000,
-      spey: false
+      spey: false,
+      zoomlevel: 'scotland'
     })
   }
 
+  getzoomcontrols(){
+    return (
+    <div>
+      <button 
+        css={{
+          width: '100%',
+          marginBottom: '1px',
+          backgroundColor: this.state.zoomlevel === 'scotland' ? Constants.lightblue : Constants.darkblue,
+        }}
+        onClick={this.zoomOut}>Scotland</button>
+      <br/>
+      <button 
+        css={{
+          width: '100%',
+          marginBottom: '1px',
+          backgroundColor: this.state.zoomlevel === 'islay' ? Constants.lightblue : Constants.darkblue,
+        }}
+        onClick={this.zoomIslay}>Islay</button>
+      <br/>
+      <button 
+        css={{
+          width: '100%',
+          marginBottom: '1px',
+          backgroundColor: this.state.zoomlevel === 'spey' ? Constants.lightblue : Constants.darkblue,
+        }}
+        onClick={this.zoomSpey}>Speyside</button>
+      <br/>
+    </div>
+    )
+  }
+
   render() {
+    const zoomcontrols = this.getzoomcontrols()
+
     return (
       <div>
         <div
@@ -70,6 +107,7 @@ class FormattedOverview extends React.Component {
           width={300}
           height={300}
         />
+        {this.props.zoom ? zoomcontrols : null}
         </div>
         <div
           css={{
@@ -83,6 +121,8 @@ class FormattedOverview extends React.Component {
             rotate0={this.state.rotate0}
             rotate1={this.state.rotate1}
             scale={this.state.scale}
+            spey={this.state.spey}
+            cluster={this.props.cluster}
           />
         </div>
       </div>
