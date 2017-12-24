@@ -22,6 +22,7 @@ span.mono{
     font-family: monospace;
 }
 
+<<<<<<< HEAD
 blockquote{
     font-style: oblique;
 }
@@ -80,4 +81,8 @@ blockquote{
         width: 80%;
         margin-top: 1em;
     }
+=======
+path{
+    display: inline
+>>>>>>> there is a strange part of the css that was setting nodisplay on svg paths. overwrite this
 }
