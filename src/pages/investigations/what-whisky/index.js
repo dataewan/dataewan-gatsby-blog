@@ -26,7 +26,6 @@ class WhatWhiskyIndex extends React.Component {
     this.setState({
       selected: d
     })
-    console.log(this.state)
   }
 
   render() {
