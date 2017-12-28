@@ -83,9 +83,24 @@ class FormattedOverview extends React.Component {
 
   render() {
     const zoomcontrols = this.getzoomcontrols()
+    const overviewradial = this.props.cluster ?  <Radial
+            whisky={this.props.whisky}
+            cluster={this.props.cluster}
+            radialFill={'tan'}
+            radialOverall={this.props.radialOverall}
+            width={400}
+            height={300}
+          /> : null
 
     return (
       <div>
+        <div
+          css={{
+            width: Constants.leftwidth
+          }}
+        >
+          {overviewradial}
+        </div>
         <div
           css={{
             float: 'right',
@@ -114,6 +129,7 @@ class FormattedOverview extends React.Component {
             width: Constants.leftwidth
           }}
         >
+
           <Map
             {...this.props}
             width={594}
