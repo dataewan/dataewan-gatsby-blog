@@ -11,20 +11,31 @@ import whisky from './whisky.json';
 import Radial from './_Radial'
 import Map from './_Map';
 import FormattedOverview from './_FormattedOverview';
+import ClusterSelector from './_ClusterSelector';
 
+const ALLSTRING = 'All'
 
 class WhatWhiskyIndex extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      selected: null
+      selected: null,
+      selectedcluster: ALLSTRING
     }
     this.onHover.bind(this)
+    this.clusterupdate.bind(this)
   } 
   
   onHover = (d) => {
     this.setState({
       selected: d
+    })
+  }
+
+  clusterupdate = (d) => {
+    this.setState({
+      selectedcluster: d,
+      selected: null
     })
   }
 
@@ -47,12 +58,17 @@ class WhatWhiskyIndex extends React.Component {
         <Paragraph>
           I have nearly finished my bottle of whisky.
           I would like to make an informed decision when purchasing my next one.
+          I know a little bit about whisky but not enough to make a confident decision.
           I found a <a href='https://www.mathstat.strath.ac.uk/outreach/nessie/nessie_whisky.html'>dataset from Glasgow University</a>.
-          I've been digging around in this dataset, and have found some very useful.
+        </Paragraph>
+        <Paragraph>
+          After digging around in this data, I've found a few new ways to think about my whisky purchase.
+          I also found <a href="https://www.youtube.com/watch?v=t5YeM55l2_0&index=1&list=PL1ABF6820EA98D487">Brian Cox</a> clearly enjoying himself while helping with the pronunciation.
         </Paragraph>
         <Section name="Contents of the dataset">
-          <Paragraph>
+          <Paragraph note="On all these maps, hover over the points to find out more.">
             There are 86 individual distilleries contained in this dataset.
+            Here they all are on a map.
           </Paragraph>
           <div>
             <div
@@ -100,22 +116,30 @@ class WhatWhiskyIndex extends React.Component {
           </Figure>
           <Paragraph>
             This means that there are 12 ⨉ 86 = 1,032 observations in this dataset.
-            This is too much information to make sense of.
-            Fortunately there are a few things we can do to narrow down what we need to think about.
+            We'd need to hold them all in our head at once to make an informed decision,
+            which is beyond me.
+            There are a few rules of thumb that we can use to narrow down our decision making criteria.
           </Paragraph>
         </Section>
         <Section name='Geography of Scotland'>
           <Paragraph>
-            The geography of Scotland has quite an impact on the flavour of the whisky.
+            One of the easiest things to get your head around is the geography of Scotland.
+            The geography of Scotland is thought to have quite an impact on the characteristics of the whisky.
           </Paragraph>
-          <Figure caption='From https://www.wineware.co.uk, the whisky regions of Scotland'>
+          <Figure caption={<div>From <a href="https://www.wineware.co.uk/Content/Images/uploaded/Satelite%20Pages/scotch-whisky-map-1.jpg">wineware.co.uk</a>, the whisky regions of Scotland</div>}>
             <img src="https://www.wineware.co.uk/Content/Images/uploaded/Satelite%20Pages/scotch-whisky-map-1.jpg" />
           </Figure>
           <Paragraph>
-            In particular there are two regions with a high concentration of distilleries.
+            In particular there are two regions with a very high concentration of distilleries.
             Islay and Speyside.
           </Paragraph>
           <Subsection name='Islay'>
+            <Paragraph>
+              Islay is an island on the west coast, in the island group called the Inner Hebrides.
+              When you think about Islay whisky,
+              you think about big, smoky, peaty whisky.
+              You can see that this is the case, particularly in the three distilleries in the south coast.
+            </Paragraph>
             <FormattedOverview
               {...theme}
               whisky={whisky}
@@ -128,6 +152,20 @@ class WhatWhiskyIndex extends React.Component {
             />
           </Subsection>
           <Subsection name='Speyside'>
+            <Paragraph note={<a href="https://www.thewhiskyexchange.com/c/314/speyside-single-malt-scotch-whisky">60% figure comes from Whisky Exchange</a>}>
+              The second area that has a high concentration of distilleries is Speyside.
+              I've highlighted on this map the River Spey, which gives this area its name.
+              More than 60% of Scotland's whisky comes from Speyside.
+              I can't find out why so much whisky comes from Speyside.
+              Some people claim that the area has water and climate that is particularly suitable for whisky production,
+              but I can't verify that.
+            </Paragraph>
+            <Paragraph>
+              When you think about Speyside whisky you think about lighter, relaxed whisky.
+              This does seem to be the case,
+              but you also notice that there is a lot of variation between whiskies that are even right next to each other.
+              There's something else going on here.
+            </Paragraph>
             <FormattedOverview
               {...theme}
               whisky={whisky}
@@ -138,99 +176,54 @@ class WhatWhiskyIndex extends React.Component {
               scale={24800}
               spey={true}
             />
+            <Paragraph>
+            </Paragraph>
+            <FormattedOverview
+              {...theme}
+              whisky={whisky}
+              selected={this.state.selected}
+              onHover={this.onHover}
+              rotate0={3.3}
+              rotate1={0.29}
+              scale={100000}
+              spey={true}
+            />
           </Subsection>
         </Section>
         <Section name='Putting the whisky into groups'>
-          <Subsection name="Group 0">
-            <FormattedOverview
-              {...theme}
-              whisky={whisky}
-              selected={this.state.selected}
-              onHover={this.onHover}
-              cluster={'0'}
-              zoom={true}
-            />
-          </Subsection>
-          <Subsection name="Group 1">
-            <FormattedOverview
-              {...theme}
-              whisky={whisky}
-              selected={this.state.selected}
-              onHover={this.onHover}
-              cluster={'1'}
-              zoom={true}
-            />
-          </Subsection>
-          <Subsection name="Group 2">
-            <FormattedOverview
-              {...theme}
-              whisky={whisky}
-              selected={this.state.selected}
-              onHover={this.onHover}
-              cluster={'2'}
-              zoom={true}
-            />
-          </Subsection>
-          <Subsection name="Group 3">
-            <FormattedOverview
-              {...theme}
-              whisky={whisky}
-              selected={this.state.selected}
-              onHover={this.onHover}
-              cluster={'3'}
-              zoom={true}
-            />
-          </Subsection>
-          <Subsection name="Group 4">
-            <FormattedOverview
-              {...theme}
-              whisky={whisky}
-              selected={this.state.selected}
-              onHover={this.onHover}
-              cluster={'4'}
-              zoom={true}
-            />
-          </Subsection>
-          <Subsection name="Group 5">
-            <FormattedOverview
-              {...theme}
-              whisky={whisky}
-              selected={this.state.selected}
-              onHover={this.onHover}
-              cluster={'5'}
-              zoom={true}
-            />
-          </Subsection>
-          <Subsection name="Group 6">
-            <FormattedOverview
-              {...theme}
-              whisky={whisky}
-              selected={this.state.selected}
-              onHover={this.onHover}
-              cluster={'6'}
-              zoom={true}
-            />
-          </Subsection>
-          <Subsection name="Group 7">
-            <FormattedOverview
-              {...theme}
-              whisky={whisky}
-              selected={this.state.selected}
-              onHover={this.onHover}
-              cluster={'7'}
-              zoom={true}
-            />
-          </Subsection>
-          <Subsection name="Group 8">
-            <FormattedOverview
-              {...theme}
-              whisky={whisky}
-              selected={this.state.selected}
-              onHover={this.onHover}
-              cluster={'8'}
-              zoom={true}
-            />
-          </Subsection>
+          <Paragraph note={<a href="https://github.com/dataewan/whisky-vis/blob/master/analysis/whiskyanalysis.ipynb">analysis</a>}>
+            The other trick we can use is to group the whiskies into groups with similar characteristics.
+            I've found there are 9 groups in the data that can help break down the problem.
+            Select the groups below to find out more about them.
+          </Paragraph>
+          <ClusterSelector 
+            whisky={whisky}
+            selectedcluster={this.state.selectedcluster}
+            onUpdate={this.clusterupdate}
+            allstring={ALLSTRING}
+          />
+          <FormattedOverview
+            {...theme}
+            whisky={whisky}
+            selected={this.state.selected}
+            clusterselected={this.state.selectedcluster}
+            clusteroverview={true}
+            onHover={this.onHover}
+            cluster={this.state.selectedcluster === ALLSTRING ? null : this.state.selectedcluster}
+            controls={true}
+            colourcluster={true}
+          />
+        </Section>
+        <Section name="What am I going to buy?">
+          <Paragraph>
+            Everyone has different tastes when it comes to whisky,
+            and even your own tastes might change depending on the occasion.
+            There isn't going to be a single correct answer.
+          </Paragraph>
+          <Paragraph>
+          </Paragraph>
+          <Paragraph>
+          </Paragraph>
         </Section>
       </article>
     );
