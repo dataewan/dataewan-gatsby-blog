@@ -159,11 +159,21 @@ class FormattedOverview extends React.Component {
     )
   }
 
+  getclustermembership(){
+    if (this.props.colourcluster) {
+      if (this.props.selected) {
+        return <h4>Group: {this.props.selected.cluster}, {clustertext[this.props.selected.cluster].name}</h4>
+      } else {
+        return <h4>Group: </h4>
+      }
+    }
+  }
+
   render() {
     const zoomcontrols = this.getzoomcontrols()
     const overview = this.props.clusteroverview ? this.getoverview() : null
     const whiskyselectorcontrol = this.getwhiskyselectorcontrol()
-    window.whisky = this.props.whisky
+    const clustermembership = this.getclustermembership()
 
     return (
       <div>
@@ -184,6 +194,7 @@ class FormattedOverview extends React.Component {
             this.props.selected ? `Postcode: ${this.props.selected.Postcode}` : 'Postcode:'
           }
         </h4>
+        {clustermembership}
         <Radial
           whisky={this.props.whisky}
           selected={this.props.selected}
