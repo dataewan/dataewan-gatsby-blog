@@ -1,0 +1,42 @@
+{
+    "All": {
+        "desc": "Select a group here to show more information about the group. Explore the distilleries on the map below.",
+        "name": false
+    },
+    "0": {
+        "desc": "This group contains the sweetest whiskies. With the exception of the Isle of Arran, all are in Speyside. Tend to have lower scores in other areas, could be quite mellow.",
+        "name": "Light, sweet"
+    },
+    "1": {
+        "desc": "Not medicinal, but some bigger scores in the other categories. A lot of variation in this group.",
+        "name": "Rich, malty, nutty"
+    },
+    "2": {
+        "desc": "The thing that stands out about this group is a medicinal flavour. This is thought to be to do with iodine in the sea air. All these distilleries are coastal. Fairly relaxed in the other flavours",
+        "name": "Maritime, mellow"
+    },
+    "3": {
+        "desc": "Get lower scores on the body, winey characteristics. Have a few of the other flavours hidden in there. Mainly Speyside, but interesting to see Bunnahabhain from Islay in there.",
+        "name": "Subtle"
+    },
+    "4": {
+        "desc": "These have a strong body, and lots of winey flavours. Mainly from Speyside. Winey might be because of the use of sherry casks when maturing these whiskies.",
+        "name": "Strong, winey"
+    },
+    "5": {
+        "desc": "These are big, smoky, medicinal whiskies. These come from costal distilleries. Similar to group 2, but with more oomph.",
+        "name": "Maritime, strong"
+    },
+    "6": {
+        "desc": "Not much honey or winey flavours in this group. You can find more fruit and spice.",
+        "name": "Fruits and spice"
+    },
+    "7": {
+        "desc": "These two distilleries on Islay are right next to each other. They get very similar scores, very full of flavour",
+        "name": "South Islay"
+    },
+    "8": {
+        "desc": "Less sweet than group 0, which is the sweetest group, but still sweeter than average. Honey, fruity, floral.",
+        "name": "Rich, sweet"
+    }
+}

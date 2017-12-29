@@ -1,9 +1,14 @@
 import React from 'React'
 
+import {
+  Paragraph
+} from '../../../components'
+
 import Constants from '../../../components/constants.js'
 
 import Radial from './_Radial'
 import Map from './_Map';
+import clustertext from './clustertext.json'
 
 class FormattedOverview extends React.Component {
   constructor(props){
@@ -81,26 +86,69 @@ class FormattedOverview extends React.Component {
     )
   }
 
+  getoverview(){
+    const selectedclusterobject = clustertext[this.props.clusterselected]
+    const selectedclustertext = selectedclusterobject.desc
+    const clustername = selectedclusterobject.name ? <h4>{selectedclusterobject.name}</h4> : null
+    return(
+      <div >
+        <Radial
+              whisky={this.props.whisky}
+              cluster={this.props.cluster}
+              radialFill={'tan'}
+              radialOverall={this.props.radialOverall}
+              width={300}
+              height={300}
+            />
+            <div
+              css={{
+                position: 'relative',
+                left: '300',
+                top: '-250',
+                width: '300'
+              }}>
+              {clustername}
+              <p>
+                {selectedclustertext}
+              </p>
+            </div>
+      </div>
+    )
+  }
+
+  getwhiskyselectorcontrol(){
+    const options = this.props.whisky.map((d, i) => {
+      return (
+        <option
+          key={`whiskyselectorcontroloptionid${i}`}
+          value={d.RowID}
+        >
+          {d.formatname}
+        </option>
+      )
+    })
+    return(
+      <select
+        value={this.props.selected ? this.props.selected.RowID : '---'}
+        onChange={e => {
+          const selected = this.props.whisky.filter(d => d.RowID === e.target.value)[0]
+          this.props.onHover(selected)
+        }}
+      >
+        {options}
+      </select>
+    )
+  }
+
   render() {
     const zoomcontrols = this.getzoomcontrols()
-    const overviewradial = this.props.cluster ?  <Radial
-            whisky={this.props.whisky}
-            cluster={this.props.cluster}
-            radialFill={'tan'}
-            radialOverall={this.props.radialOverall}
-            width={400}
-            height={300}
-          /> : null
+    const overview = this.props.clusteroverview ? this.getoverview() : null
+    const whiskyselectorcontrol = this.getwhiskyselectorcontrol()
+    window.whisky = this.props.whisky
 
     return (
       <div>
-        <div
-          css={{
-            width: Constants.leftwidth
-          }}
-        >
-          {overviewradial}
-        </div>
+        {overview}
         <div
           css={{
             float: 'right',
@@ -118,11 +166,16 @@ class FormattedOverview extends React.Component {
           }
         </h4>
         <Radial
-          {...this.props}
+          whisky={this.props.whisky}
+          selected={this.props.selected}
+          radialFill={this.props.radialFill}
+          radialOverall={this.props.radialOverall}
           width={300}
           height={300}
         />
-        {this.props.zoom ? zoomcontrols : null}
+        {this.props.controls ? zoomcontrols : null}
+        {this.props.controls ? whiskyselectorcontrol : null}
+        
         </div>
         <div
           css={{
@@ -139,6 +192,7 @@ class FormattedOverview extends React.Component {
             scale={this.state.scale}
             spey={this.state.spey}
             cluster={this.props.cluster}
+            colourcluster={this.props.colourcluster}
           />
         </div>
       </div>
