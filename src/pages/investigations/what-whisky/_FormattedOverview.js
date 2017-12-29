@@ -23,6 +23,7 @@ class FormattedOverview extends React.Component {
     this.zoomOut = this.zoomOut.bind(this)
     this.zoomSpey = this.zoomSpey.bind(this)
     this.zoomIslay = this.zoomIslay.bind(this)
+    this.zoomDeepSpey = this.zoomDeepSpey.bind(this)
   }
 
   zoomSpey(e){
@@ -32,6 +33,16 @@ class FormattedOverview extends React.Component {
       scale: 24800,
       spey: true,
       zoomlevel: 'spey',
+    })
+  }
+
+  zoomDeepSpey(e){
+    this.setState({
+      rotate0: 3.3,
+      rotate1: 0.29,
+      scale: 100000,
+      spey: true,
+      zoomlevel: 'deepspey',
     })
   }
 
@@ -81,6 +92,14 @@ class FormattedOverview extends React.Component {
           backgroundColor: this.state.zoomlevel === 'spey' ? Constants.lightblue : Constants.darkblue,
         }}
         onClick={this.zoomSpey}>Speyside</button>
+      <br/>
+      <button 
+        css={{
+          width: '100%',
+          marginBottom: '1px',
+          backgroundColor: this.state.zoomlevel === 'deepspey' ? Constants.lightblue : Constants.darkblue,
+        }}
+        onClick={this.zoomDeepSpey}>Closer view Speyside</button>
       <br/>
     </div>
     )

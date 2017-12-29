@@ -13,6 +13,8 @@ import Map from './_Map';
 import FormattedOverview from './_FormattedOverview';
 import ClusterSelector from './_ClusterSelector';
 
+import rothes from './rothes.png'
+
 const ALLSTRING = 'All'
 
 class WhatWhiskyIndex extends React.Component {
@@ -177,6 +179,9 @@ class WhatWhiskyIndex extends React.Component {
               spey={true}
             />
             <Paragraph>
+              It is easy to miss some of the detail on this map.
+              There are a lot of distilleries in Speyside.
+              We'll zoom in a bit closer.
             </Paragraph>
             <FormattedOverview
               {...theme}
@@ -188,6 +193,20 @@ class WhatWhiskyIndex extends React.Component {
               scale={100000}
               spey={true}
             />
+            <Paragraph>
+              See if you can find the Glen Rothes, Glen Spey, and Glen Grant distilleries.
+              They're towards the north of this area, right on the banks of the river.
+              They almost overlap each other.
+              Looking at them on a map we can see that these distilleries are about 300m apart, just down the road from each other.
+            </Paragraph>
+            <Figure caption={
+                <div>
+                  <div>Map of the village of Rothes</div>
+                  <div><a href="https://www.google.co.uk/maps/@57.5294291,-3.2074024,1898m/data=!3m1!1e3">source</a></div>
+                </div>
+                }>
+                <img src={rothes} />
+            </Figure>
           </Subsection>
         </Section>
         <Section name='Putting the whisky into groups'>
