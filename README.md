@@ -1,13 +1,20 @@
-# gatsby-starter-default
-The default Gatsby starter
+# dataewan gatsby blog
+Based on the default Gatsby starter
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+## developing
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+Run this command to see changes appear in the browser as you make them.
+
 ```
-gatsby new gatsby-example-site
+gatsby develop -H localhost
 ```
 
-## Deploy
+## deploying
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+```
+gatsby build
+```
+
+Apply these changes to the `master` branch of the `dataewan.github.com` repo to see them here:
+
+http://dataewan.github.io/
