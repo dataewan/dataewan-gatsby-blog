@@ -62,6 +62,7 @@ class WhatWhiskyIndex extends React.Component {
           I would like to make an informed decision when purchasing my next one.
           I know a little bit about whisky but not enough to make a confident decision.
           I found a <a href='https://www.mathstat.strath.ac.uk/outreach/nessie/nessie_whisky.html'>dataset from Glasgow University</a>.
+          Can I use data to make a better decision?
         </Paragraph>
         <Paragraph>
           After digging around in this data, I've found a few new ways to think about my whisky purchase.
@@ -238,10 +239,30 @@ class WhatWhiskyIndex extends React.Component {
             Everyone has different tastes when it comes to whisky,
             and even your own tastes might change depending on the occasion.
             There isn't going to be a single correct answer.
+            I've learned a lot for my shopping expedition.
           </Paragraph>
           <Paragraph>
+            From past experience, I know that I personally don't enjoy very strong smoky peaty whisky much.
+            So this is groups 2, 5, and 7.
+            I've steered clear of Islay whiskies for this reason.
+            However, there is a lot more subtlety there than I realised.
+            Bunnahabhain in particular, and also Bruichladdich, and Bowmore might be something that I should try.
           </Paragraph>
           <Paragraph>
+            I've also learned that there is a lot more variation in Speyside whisky than I realised.
+            I've been introduced to the term <a href="https://www.thewhiskyexchange.com/c/314/speyside-single-malt-scotch-whisky">lunchtime whisky</a>, which looks a bit like group 0.
+          </Paragraph>
+          <Paragraph>
+            I'm not looking for lunchtime whisky.
+            I think that I'm looking for something that I can sit in my chair with a book and drink.
+            I've learned about winey whiskies (group 4), which look quite interesting.
+            I'm also poking around in group 8, as I've enjoyed some whiskies from there before.
+          </Paragraph>
+          <Paragraph>
+            Sadly I've also learned that there is some poor quality information in this dataset.
+            For example <i>Belvenie</i> should be <i>The Balvenie</i>, and had the wrong location in the original data.
+            I've tidied things up, and most of the data looks good quality.
+            I'm probably going to incorporate some other information in my decision process.
           </Paragraph>
         </Section>
       </article>
