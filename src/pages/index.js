@@ -30,6 +30,9 @@ const IndexPage = () => (
       <Paragraph>
         Learning by applying techniques.
       </Paragraph>
+      <Linktree>
+        <Linknode to='investigations/what-whisky' desc='Using data to find what whisky I should purchase' />
+      </Linktree>
     </Subsection>
   </Section>
 )
