@@ -73,30 +73,13 @@ class WhatWhiskyIndex extends React.Component {
             There are 86 individual distilleries contained in this dataset.
             Here they all are on a map.
           </Paragraph>
-          <div className='containerrow'>
-            <div className='note' >
-              <h4>
-                {
-                  this.state.selected ? `Distillery: ${this.state.selected.formatname}` : null
-                }
-              </h4>
-              <h4>
-                {
-                  this.state.selected ? `Postcode: ${this.state.selected.Postcode}` : null
-                }
-              </h4>
-            </div>
-            <div className='content' >
-              <Map
-                {...theme}
-                width={594}
-                height={770}
-                whisky={whisky}
-                selected={this.state.selected}
-                onHover={this.onHover}
-              />
-            </div>
-          </div>
+          <FormattedOverview
+            whisky={whisky}
+            {...theme}
+            selected={this.state.selected}
+            onHover={this.onHover}
+            nooverview={true}
+          />
           <Paragraph>
             Each of these distilleries is given a score between 0 and 4 over 12 different taste categories.
           </Paragraph>

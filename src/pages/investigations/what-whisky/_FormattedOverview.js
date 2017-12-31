@@ -1,4 +1,5 @@
 import React from 'React'
+import ReactDOM from 'react-dom'
 
 import {
   Paragraph
@@ -9,6 +10,119 @@ import Constants from '../../../components/constants.js'
 import Radial from './_Radial'
 import Map from './_Map';
 import clustertext from './clustertext.json'
+
+
+class ResponsiveMap extends React.Component {
+  constructor(props){
+    super(props)
+    this.state={
+      width: this.props.width,
+      height: this.props.height,
+      scalemultiplier: 1
+    }
+    this.handleResize = this.handleResize.bind(this)
+  }
+
+  handleResize(e){
+    const elem = ReactDOM.findDOMNode(this);
+    const width = elem.getBoundingClientRect().width;
+    // height should always be in proportion with the width
+    const height = width * 1.3;
+    // need to make the scale smaller as the width gets smaller, diverging from
+    // the base width of 594
+    const scalemultiplier = width / 594 
+    this.setState({
+      width: width,
+      height: height,
+      scalemultiplier: scalemultiplier
+    })
+  }
+
+  componentDidMount() {
+    // put an event handler on
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize()
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  render() {
+    return (
+      <div className='content'>
+        <Map
+          width={this.state.width}
+          height={this.state.height}
+          whisky={this.props.whisky}
+
+          selectedColour={this.props.selectedColour}
+          landfill={this.props.landfill}
+          seafill={this.props.seafill}
+          riverColour={this.props.riverColour}
+          unselectedColour={this.props.unselectedColour}
+          disabledColour={this.props.disabledColour}
+
+          onHover={this.props.onHover}
+          selected={this.props.selected}
+          cluster={this.props.cluster}
+          colourcluster={this.props.colourcluster}
+
+          rotate0={this.props.rotate0}
+          rotate1={this.props.rotate1}
+          spey={this.props.spey}
+
+          scale={this.props.scale * this.state.scalemultiplier}
+        />
+      </div>
+    );
+  }
+}
+
+class ResponsiveRadial extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      width: this.props.width, 
+      height: this.props.height
+    }
+    this.handleResize = this.handleResize.bind(this)
+  }
+
+  handleResize(e){
+    const elem = ReactDOM.findDOMNode(this);
+    const width = elem.getBoundingClientRect().width;
+    // height should always be in proportion with the width
+    const height = width;
+    this.setState({
+      width: width,
+      height: height,
+    })
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize()
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  render() {
+    return (
+      <div>
+        <Radial
+          whisky={this.props.whisky}
+          selected={this.props.selected}
+          radialFill={this.props.radialFill}
+          radialOverall={this.props.radialOverall}
+          width={this.state.width}
+          height={this.state.height}
+        />
+      </div>
+    );
+  }
+}
 
 class FormattedOverview extends React.Component {
   constructor(props){
@@ -120,20 +234,14 @@ class FormattedOverview extends React.Component {
                 width={300}
                 height={300}
               />
-              <div
-                css={{
-                  position: 'relative',
-                  left: '300',
-                  top: '-250',
-                  width: '300'
-                }}>
+            </div>
+              <div className='note'>
                 {clustername}
                 <p>
                   {selectedclustertext}
                 </p>
               </div>
         </div>
-      </div>
     )
   }
 
@@ -197,7 +305,7 @@ class FormattedOverview extends React.Component {
           }
         </h4>
         {clustermembership}
-        <Radial
+        {this.props.nooverview ? null : <ResponsiveRadial
           whisky={this.props.whisky}
           selected={this.props.selected}
           radialFill={this.props.radialFill}
@@ -205,23 +313,33 @@ class FormattedOverview extends React.Component {
           width={300}
           height={300}
         />
+        }
         {this.props.controls ? zoomcontrols : null}
         {this.props.controls ? whiskyselectorcontrol : null}
         
         </div>
-        <div className='content'>
-          <Map
-            {...this.props}
-            width={594}
-            height={770}
-            rotate0={this.state.rotate0}
-            rotate1={this.state.rotate1}
-            scale={this.state.scale}
-            spey={this.state.spey}
-            cluster={this.props.cluster}
-            colourcluster={this.props.colourcluster}
-          />
-        </div>
+        <ResponsiveMap
+          width={594}
+          height={770}
+          whisky={this.props.whisky}
+
+          selectedColour={this.props.selectedColour}
+          landfill={this.props.landfill}
+          seafill={this.props.seafill}
+          riverColour={this.props.riverColour}
+          unselectedColour={this.props.unselectedColour}
+          disabledColour={this.props.disabledColour}
+
+          onHover={this.props.onHover}
+          selected={this.props.selected}
+          cluster={this.props.cluster}
+          colourcluster={this.props.colourcluster}
+
+          rotate0={this.state.rotate0}
+          rotate1={this.state.rotate1}
+          scale={this.state.scale}
+          spey={this.state.spey}
+        />
       </div>
     </div>
     );

@@ -22,6 +22,14 @@ class Radial extends React.Component {
   constructor(props){
     super(props)
     this.middle = 25
+    this.calculatescales();
+    this.bottomPad = 10
+
+    window.anglescale = this.anglescale
+    window.heightscales = this.heightscales
+  }
+
+  calculatescales(){
     const scalelength = (this.props.width / 2) ;
     this.heightscales = {}
     SCALEORDER.map(d => {
@@ -36,13 +44,10 @@ class Radial extends React.Component {
       .paddingInner(0.1)
       .range([-Math.PI / 2, Math.PI / 2])
 
-    this.bottomPad = 10
+  }
 
-    window.anglescale = this.anglescale
-    window.heightscales = this.heightscales
-
-    this.calcpoints.bind(this)
-
+  componentWillReceiveProps() {
+    this.calculatescales()
   }
 
   calcpoints(){
