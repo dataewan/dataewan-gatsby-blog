@@ -10,26 +10,13 @@ import Constants from "../components/constants"
 import { rhythm } from "../utils/typography"
 
 const header = () => (
-  <header
-    css={{
-      width: Constants.leftwidth,
-      borderBottom: `1px black solid`,
-      marginBottom: rhythm(2)
-    }}
-  >
-    <Link to='/'
-      css={{
-        textDecoration: `none`,
-        color: `black`
-      }}
-    >
-      <h1
-      css={{
-        marginBottom: rhythm(0.5)
-      }}
-      >dataewan</h1>
-    </Link>
-  </header>
+  <div className='containerrow'>
+    <header className='content'>
+      <Link to='/'>
+        <h1>dataewan</h1>
+      </Link>
+    </header>
+  </div>
 )
 
 

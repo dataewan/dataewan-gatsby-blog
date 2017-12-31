@@ -1,9 +1,4 @@
 const Constants = {
-  leftwidth: "55%",
-  rightwidth: "30%",
-
-  smallscale: -0.5,
-
   grey: '#50514F',
   darkgrey: '#3c3d3b',
   lightgrey: '#646563',

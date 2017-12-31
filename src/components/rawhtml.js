@@ -9,11 +9,10 @@ class RawHTML extends Component {
   render(){
 
     return(
-      <div css={{
-        width: Constants.leftwidth,
-        overflow: `scroll`
-      }}
-      dangerouslySetInnerHTML={ {__html: this.props.children} } />
+      <div className='containerrow'>
+        <div className='content'
+          dangerouslySetInnerHTML={ {__html: this.props.children} } />
+      </div>
     )
   }
 

@@ -8,17 +8,15 @@ class Code extends Component {
   render() {
     const language = this.props.language;
     return (
-      <pre 
-        css={{
-          width: Constants.leftwidth,
-        }}
-      >
-        <SyntaxHighlighter 
-          language={language}
-          style={coy}>
-          {this.props.code}
-        </SyntaxHighlighter>
-      </pre>
+      <div className='containerrow'>
+        <pre className='content' >
+          <SyntaxHighlighter 
+            language={language}
+            style={coy}>
+            {this.props.code}
+          </SyntaxHighlighter>
+        </pre>
+      </div>
     );
   }
 }

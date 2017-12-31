@@ -8,19 +8,15 @@ class Paragraph extends Component {
   render() {
     const note = this.props.note;
     return (
-      <div>
+      <div className='containerrow'>
         {note !== undefined &&
-            <aside css={{
-              float: `right`,
-              width: Constants.rightwidth,
-              ...scale(Constants.smallscale),
-            }}>
+            <aside className='note'>
               {note}
             </aside>
         }
-        <p css={{
-          width: Constants.leftwidth
-        }}>
+        <p
+          className='content'
+        >
           {this.props.children}
         </p>
       </div>

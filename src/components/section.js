@@ -11,7 +11,9 @@ class Section extends Component {
     const name = this.getName()
     return (
       <section>
-        <h2 id={name}>{this.props.name}</h2>
+        <div className='containerrow'>
+          <h2 className='content' id={name}>{this.props.name}</h2>
+        </div>
         {this.props.children}
       </section>
     );

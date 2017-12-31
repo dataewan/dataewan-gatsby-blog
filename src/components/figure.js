@@ -3,25 +3,17 @@ import Constants from './constants'
 import { rhythm, scale } from "../utils/typography";
 
 class Figure extends Component {
-
   getcaption(){
     if(this.props.fullwidth !== true){
       return(
-        <figcaption 
-          css={{ 
-            width: Constants.rightwidth, 
-            float: `right`, 
-            ...scale(Constants.smallscale), }}> 
+        <figcaption className='note'>
             <h6 className='figurelabel'></h6>
             {this.props.caption} 
         </figcaption>
       )
     } else {
       return (
-        <figcaption 
-          css={{ 
-            width: Constants.leftwidth, 
-            ...scale(Constants.smallscale), }}> 
+        <figcaption className='fullwidth'>
             <h6 className='figurelabel'></h6>
             {this.props.caption} 
         </figcaption>
@@ -32,19 +24,13 @@ class Figure extends Component {
   getdiv(){
     if(this.props.fullwidth !== true){
       return(
-        <div 
-          css={{ 
-            width: Constants.leftwidth, 
-          }}>
+        <div className='content'>
           {this.props.children}
         </div>
       )
     } else {
       return (
-        <div 
-          css={{ 
-            width: `100%`, 
-          }}>
+        <div className='fullwidth'>
           {this.props.children}
         </div>
       )
@@ -56,14 +42,14 @@ class Figure extends Component {
     const figdiv = this.getdiv()
     if (this.props.fullwidth){
       return (
-        <figure>
+        <figure className='containerrow'>
           {figdiv}
           {figcaption}
         </figure>
       )
     } else {
       return (
-        <figure>
+        <figure className='containerrow'>
           {figcaption}
           {figdiv}
         </figure>

@@ -9,25 +9,25 @@ class Linknode extends Component {
   render() {
     const prettyname = this.props.to.split('/').slice(-1)[0]
     return (
-      <div css={{
-        border: `${Constants.vlightgrey} 1px solid`,
-        marginBottom: rhythm(0.5),
-        width: Constants.leftwidth
-
-      }}>
-        <Link 
+      <div className='containerrow'>
+        <div className='content'
           css={{
-            display: `block`,
-            color: Constants.darkblue,
-            backgroundColor: Constants.vlightblue
-          }}
-          to={this.props.to}>
-          {prettyname}
-        </Link>
-        <div css={{
-          paddingLeft: rhythm(1)
-        }}>
-          {this.props.desc}
+              border: `1px solid ${Constants.blue}`
+          }}>
+          <Link 
+            css={{
+              display: `block`,
+              color: Constants.darkblue,
+              backgroundColor: Constants.vlightblue,
+            }}
+            to={this.props.to}>
+            {prettyname}
+          </Link>
+          <div css={{
+            paddingLeft: rhythm(1)
+          }}>
+            {this.props.desc}
+          </div>
         </div>
       </div>
     );
