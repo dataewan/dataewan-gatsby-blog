@@ -24,9 +24,6 @@ class Radial extends React.Component {
     this.middle = 25
     this.calculatescales();
     this.bottomPad = 10
-
-    window.anglescale = this.anglescale
-    window.heightscales = this.heightscales
   }
 
   calculatescales(){

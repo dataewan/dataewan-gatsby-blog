@@ -12,9 +12,6 @@ import rivers from './rivers.json';
 import { schemeSet2 as scheme } from 'd3-scale-chromatic';
 
 
-window.topojson = topojson;
-window.rivers = rivers;
-
 class Scotland extends Component {
   render() {
     const projection = this.props.proj;
