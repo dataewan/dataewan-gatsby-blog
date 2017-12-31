@@ -73,13 +73,8 @@ class WhatWhiskyIndex extends React.Component {
             There are 86 individual distilleries contained in this dataset.
             Here they all are on a map.
           </Paragraph>
-          <div>
-            <div
-              css={{
-              float: 'right',
-              width: Constants.rightwidth
-              }}
-            >
+          <div className='containerrow'>
+            <div className='note' >
               <h4>
                 {
                   this.state.selected ? `Distillery: ${this.state.selected.formatname}` : null
@@ -91,11 +86,7 @@ class WhatWhiskyIndex extends React.Component {
                 }
               </h4>
             </div>
-            <div
-              css={{
-              width: Constants.leftwidth
-              }}
-            >
+            <div className='content' >
               <Map
                 {...theme}
                 width={594}

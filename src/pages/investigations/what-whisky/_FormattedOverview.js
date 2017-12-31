@@ -110,27 +110,29 @@ class FormattedOverview extends React.Component {
     const selectedclustertext = selectedclusterobject.desc
     const clustername = selectedclusterobject.name ? <h4>{selectedclusterobject.name}</h4> : null
     return(
-      <div >
-        <Radial
-              whisky={this.props.whisky}
-              cluster={this.props.cluster}
-              radialFill={'tan'}
-              radialOverall={this.props.radialOverall}
-              width={300}
-              height={300}
-            />
-            <div
-              css={{
-                position: 'relative',
-                left: '300',
-                top: '-250',
-                width: '300'
-              }}>
-              {clustername}
-              <p>
-                {selectedclustertext}
-              </p>
-            </div>
+      <div className='containerrow'>
+        <div className='content'>
+          <Radial
+                whisky={this.props.whisky}
+                cluster={this.props.cluster}
+                radialFill={'tan'}
+                radialOverall={this.props.radialOverall}
+                width={300}
+                height={300}
+              />
+              <div
+                css={{
+                  position: 'relative',
+                  left: '300',
+                  top: '-250',
+                  width: '300'
+                }}>
+                {clustername}
+                <p>
+                  {selectedclustertext}
+                </p>
+              </div>
+        </div>
       </div>
     )
   }
@@ -178,12 +180,12 @@ class FormattedOverview extends React.Component {
     return (
       <div>
         {overview}
-        <div
+        <div className='containerrow'
           css={{
-            float: 'right',
-            width: Constants.rightwidth
+            paddingBottom: 0
           }}
         >
+        <div className='note'>
         <h4>
           {
             this.props.selected ? `Distillery: ${this.props.selected.formatname}` : 'Distillery:'
@@ -207,12 +209,7 @@ class FormattedOverview extends React.Component {
         {this.props.controls ? whiskyselectorcontrol : null}
         
         </div>
-        <div
-          css={{
-            width: Constants.leftwidth
-          }}
-        >
-
+        <div className='content'>
           <Map
             {...this.props}
             width={594}
@@ -226,6 +223,7 @@ class FormattedOverview extends React.Component {
           />
         </div>
       </div>
+    </div>
     );
   }
 }

@@ -26,12 +26,11 @@ class ClusterSelector extends React.Component {
       )
     })
     return (
-      <div
-        css={{
-          width: Constants.leftwidth
-        }}
+      <div className='containerrow'>
+      <div className='content'
       >
         {buttons}
+      </div>
       </div>
     );
   }
