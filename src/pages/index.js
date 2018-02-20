@@ -34,6 +34,9 @@ const IndexPage = () => (
         <Linknode to='investigations/what-whisky' desc='Using data to find what whisky I should purchase' />
       </Linktree>
     </Subsection>
+    <Subsection name="Projects">
+      <Linknode to="projects/papa-baiden" desc="Project investigating homelessness data in England" />
+    </Subsection>
   </Section>
 )
 
