@@ -91,8 +91,6 @@ class PapaBaiden extends React.Component {
             and converting a shapefile to python objects also works well.
             Where it falls down is locating the regions on the hex grid.
             I tried a few different approaches.
-          </Paragraph>
-          <Paragraph>
             <ul>
               <li>Assigning each region naively to the nearest hex on the grid. Where there are overlaps (multiple regions assigned to the same hex) sort them out by pushing them outwards. This sort of works, but doesn't keep neighbouring regions close together (Figure 3).</li>
               <li>Try and create a function that describes a good placement, and use optimisation techniques like simulated annealing. This is less time consuming, but I couldn't find a good function to describe a good placement. You get something that is very happy once it sorts out all the overlaps, and is happy to achieve that by scattering regions all over the place.</li>
