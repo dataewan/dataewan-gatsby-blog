@@ -24,7 +24,7 @@ class PapaBaiden extends React.Component {
             I found a link to <a href="https://www.vizforsocialgood.com/">vizforsocialgood.com</a> on twitter.
             They have a visualisation project underway all the time.
             The project that I worked on was from <a href="https://www.vizforsocialgood.com/join-a-project/2018/1/1/tomorrow-today-papa-baiden">Papa Baiden</a>, a charity based in London.
-            The project aim was to meet this requirement: <i>We need an in-depth dashboard that helps people understand the homelessness issues. The data visualisations will be featured on the website, Facebook group, Twitter, and Instagram.</i>
+            The project was to meet this requirement: <i>We need an in-depth dashboard that helps people understand the homelessness issues. The data visualisations will be featured on the website, Facebook group, Twitter, and Instagram.</i>
           </Paragraph>
         </Subsection>
         <Subsection name="The raw data">
@@ -35,9 +35,10 @@ class PapaBaiden extends React.Component {
           <Paragraph>
             These spreadsheets were fairly tricky to work with.
             The tabular data only really makes sense when you are a human reading it:
-            there's a hierarchy in the regional data that is described by empty cells.
-            The codes for the regions changed at a point in time, which causes the gaps in the data in Figure 1.
-            The description of this change was recorded in quite bureaucratic language in a cell at the bottom of the spreadsheet.
+            there's a hierarchy in the regional data that is described by empty cells and gaps in the data.
+            The codes for the regions changed at a point in time, which causes the black gaps in the data in Figure 1.
+            The description of this change was recorded in quite bureaucratic language in a cell at the bottom of the spreadsheet,
+            not machine readable.
           </Paragraph>
           <Figure
             fullwidth={false}
@@ -49,10 +50,12 @@ class PapaBaiden extends React.Component {
             I think this is a really good illustration of how hard it is to maintain a publicly accessible dataset.
             The UK government invest a lot of time and effort in making this data available,
             and they generally do an excellent job.
-            Even they find it difficult to make a correct and complete dataset in machine readable format.
+            Even <i>they</i> find it difficult to make a correct and complete dataset in machine readable format.
             I wrote python code to parse these spreadsheets to make them repeatable.
             The code <a href="https://github.com/dataewan/papabaiden-vizforgood-/blob/master/src/data/extract_lt_data.py">is complex</a>, with lots of logic to catch edge cases. 
             I'm not sure that I would take this approach again.
+            It is good for repeatability of this data,
+            but hard to generalise.
           </Paragraph>
         </Subsection>
         <Subsection name="hexgridmap">
@@ -60,7 +63,7 @@ class PapaBaiden extends React.Component {
             Since this is a project I'm doing in my spare time,
             I allowed myself to get lost in interesting ideas that don't have a clear payoff.
             The biggest example is that I tried to avoid using a <i>choropleth map</i>.
-            These are the nice looking maps where geographic areas are shaded to represent a variable.
+            These are the nice looking maps where geographic areas are coloured to represent a variable.
             The problem with these maps is that while they look nice,
             they do a bad job at presenting information.
             It makes areas that are bigger look more important just because they have a larger area,
@@ -72,29 +75,32 @@ class PapaBaiden extends React.Component {
             <img src="http://thewhyaxis.info/content/24-bitly/mediamap-in1.jpg" />
           </Figure>
           <Paragraph note={<a href="https://www.redblobgames.com/grids/hexagons/">redblobgames</a>}>
-            To get around this problem, sometimes people use a hexagonal grid.
+            To get around this problem, one solution is to use a hexagonal grid.
             You assign each region to a hexagon,
-            and then try and arrange the hexagons on the grid to try and get them to represent geographic relationships.
+            and then try and arrange the hexagons on the grid to get them to represent geographic locations.
             Hexagons are good because they are a regular shape,
-            you can make them have all the same area,
-            and hexagons have a lot of neighbours.
-            The geometry of hexagons is more complex than standard cartesian coordinates,
-            but fortunately there is fascinating tutorial from redblobgames that takes you through the geometry.
+            you can make them have all the same area removing the distortion,
+            and hexagons have a lot of immediate neighbours.
+            The downside of hexagons is that geometric calculations are more complex with hexagons than a square grid.
+            Fortunately there is fascinating tutorial from redblobgames that takes you through the calculations.
           </Paragraph>
 
           <Paragraph>
             I worked on a python package (<a href="https://github.com/dataewan/hexgridmap">hexgridmap</a>) to convert from shapefiles to hexgridmaps.
-            The geometry works well,
+            The grid geometry works well,
             and converting a shapefile to python objects also works well.
-            I tried a few methods for getting a good assignment.
+            Where it falls down is locating the regions on the hex grid.
+            I tried a few different approaches.
+          </Paragraph>
+          <Paragraph>
             <ul>
-              <li>Assigning each region naively to the nearest hex on the grid. Where there are overlaps (multiple regions assigned to the same hex) sort them out by pushing them outwards. This sort of works, but doesn't keep neighbouring regions close together.</li>
+              <li>Assigning each region naively to the nearest hex on the grid. Where there are overlaps (multiple regions assigned to the same hex) sort them out by pushing them outwards. This sort of works, but doesn't keep neighbouring regions close together (Figure 3).</li>
               <li>Try and create a function that describes a good placement, and use optimisation techniques like simulated annealing. This is less time consuming, but I couldn't find a good function to describe a good placement. You get something that is very happy once it sorts out all the overlaps, and is happy to achieve that by scattering regions all over the place.</li>
               <li>I was starting to work on a branch that would create contiguous islands, and then place these next to each other. I stopped myself after just starting to explore this, and is where I would pick up again.</li>
             </ul>
           </Paragraph>
           <Figure
-            caption={"Results from a naive assignment and then pushing overlaps out. The general shape looks okay, but note that the regions in red are from Greater London, and get spread out too much. We end up with Ealing on the coast."}
+            caption={"Results from a naive assignment and then pushing overlaps out. The general shape looks okay, but note that the regions in red are regions in Greater London, and get spread out too much. We end up with Ealing on the coast."}
           >
             <img src={hexgrid} />
           </Figure>
@@ -120,7 +126,7 @@ class PapaBaiden extends React.Component {
             <Paragraph>
               I like the interactivity, it works smoothly.
               React handling state is a very good way of working.
-              It wasn't complex enough for me to need to reach for Redux, but not far off.
+              It wasn't complex enough for me to need to reach for Redux.
               In particular I like the interaction between the table and the maps.
             </Paragraph>
             <Paragraph>
