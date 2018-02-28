@@ -3,6 +3,11 @@ body{
    counter-reset: figure;
 }
 
+.twitterlink{
+    padding: 0;
+    margin: 0;
+}
+
 header{
     border-bottom: 1px solid black;
 }

@@ -12,9 +12,12 @@ import { rhythm } from "../utils/typography"
 const header = () => (
   <div className='containerrow'>
     <header className='content'>
-      <Link to='/'>
-        <h1>dataewan</h1>
-      </Link>
+      <a href="https://twitter.com/dataewan" class='twitterlink'>
+        <img src='./twitter.png' alt='twitter link' width="25"/>
+      </a>
+        <Link to='/'>
+          <h1>dataewan</h1>
+        </Link>
     </header>
   </div>
 )
