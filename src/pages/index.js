@@ -37,6 +37,11 @@ const IndexPage = () => (
     <Subsection name="Projects">
       <Linknode to="projects/papa-baiden" desc="Project investigating homelessness data in England" />
     </Subsection>
+    <Subsection name="Talks">
+      <Paragraph>
+        <a href='https://dataewan.github.io/data-science-lessons-software-engineers/'>Pydata Edinburgh: lessons data science can learn from software engineers</a>
+      </Paragraph>
+    </Subsection>
   </Section>
 )
 
