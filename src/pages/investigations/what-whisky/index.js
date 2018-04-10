@@ -13,6 +13,8 @@ import Map from './_Map';
 import FormattedOverview from './_FormattedOverview';
 import ClusterSelector from './_ClusterSelector';
 
+import './App.css'
+
 import rothes from './rothes.png'
 
 const ALLSTRING = 'All'

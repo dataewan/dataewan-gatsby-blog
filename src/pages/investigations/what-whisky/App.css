@@ -5,15 +5,21 @@ svg.map{
 g{
 }
 
+path{
+    display: block;
+}
+
 path.scotland{
+    display: block;
     stroke: none;
-    fill: #E4DBDF;
+    fill: #5cad9f;
 }
 
 path.river{
     fill: none;
     stroke-width: 0.9;
-    stroke: seagreen;
+    stroke: #10678c;
+    display: block;
 }
 
 circle{
@@ -23,6 +29,11 @@ circle{
 
 path.radial{
     fill: #ddd6c0;
+    display: block;
+}
+
+path.radialcluster, path.radialoverall{
+    display: block;
 }
 
 text.radiallabel{
@@ -40,7 +51,3 @@ div.information > table{
 div.information > svg{
 }
 
-div.map{
-    float: right;
-    width: 70%;
-}
