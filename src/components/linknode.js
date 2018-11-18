@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import Link from 'gatsby-link'
+import { Link } from "gatsby";
 
 import Constants from './constants'
 import { rhythm } from '../utils/typography'

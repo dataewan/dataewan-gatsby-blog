@@ -8,8 +8,9 @@ import Subsubsection from './subsubsection'
 import Linktree from './Linktree'
 import Linknode from './Linknode'
 import RawHTML from './rawhtml'
+import Layout from './Layout'
 
-module.exports = {
+export {
   BlockQuote,
   Code,
   Figure,
@@ -20,4 +21,5 @@ module.exports = {
   Linktree,
   Linknode,
   RawHTML,
+  Layout,
 }

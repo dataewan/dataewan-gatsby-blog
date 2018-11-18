@@ -1,0 +1,103 @@
+body{
+   max-width: 1400px;
+   counter-reset: figure;
+}
+
+.twitterlink{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    border-bottom: 1px solid black;
+}
+
+header > a{
+    text-decoration: none;
+    color: black;
+}
+
+h6.figurelabel:before{
+   counter-increment: figure;
+   content: "Figure " counter(figure);
+}
+
+span.mono{
+    white-space: pre;
+    font-family: monospace;
+}
+
+blockquote{
+    font-style: oblique;
+}
+
+/* layout */
+.containerrow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 87.5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12.5%;
+    padding-bottom: 1em;
+}
+
+.content{
+    order: 1;
+    width: 55%;
+    margin: 0;
+}
+
+.note{
+    order: 2;
+    width: 30%;
+    font-size: 70%;
+}
+
+.fullwidth{
+    width: 100%;
+}
+
+@media only screen and (max-width: 750px) and (min-width: 501px){
+    .containerrow{
+        padding-left: 5%;
+        width: 95%;
+    }
+}
+
+
+/* change the layout on mobile devices */
+@media only screen and (max-width: 500px) {
+    .containerrow{
+        flex-direction: column;
+        padding-left: 0;
+        width: 100%
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .note{
+        margin-left: 20%;
+        width: 80%;
+        margin-top: 1em;
+    }
+}
+
+path{
+    display: inline
+}
+
+button{
+    background-color: #247BA0;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}

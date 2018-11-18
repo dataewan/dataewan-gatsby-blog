@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 
 import {
-  Section, Subsection, Paragraph, Code, BlockQuote, Linktree, Linknode
+  Section, Subsection, Paragraph, Code, BlockQuote, Linktree, Linknode, Layout
 } from '../../../../components/'
 
 class PandasIndex extends Component {
@@ -12,6 +12,7 @@ class PandasIndex extends Component {
 
   render() {
     return (
+      <Layout>
       <article>
         <Paragraph note={
           <div>
@@ -86,6 +87,7 @@ results = (
           </Subsection>
         </Section>
       </article>
+    </Layout>
     );
   }
 }

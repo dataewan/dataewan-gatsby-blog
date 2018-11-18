@@ -4,13 +4,14 @@ import PropTypes from 'prop-types';
 import typography from "../../../utils/typography"
 
 import {
-  Section, Subsection, Paragraph, Figure, Code, BlockQuote, Linktree, Linknode
+  Section, Subsection, Paragraph, Figure, Code, BlockQuote, Linktree, Linknode, Layout
 }from "../../../components"
 
 class IndexPage extends Component {
   render() {
     console.log(typography)
     return (
+      <Layout>
       <article>
         <Section name="This explaination format">
           <Paragraph>
@@ -37,7 +38,7 @@ class IndexPage extends Component {
           </Linktree>
         </Section>
       </article>
-
+    </Layout>
     );
   }
 }

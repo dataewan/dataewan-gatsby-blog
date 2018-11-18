@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import Constants from './constants'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import { rhythm, scale } from "../utils/typography";
 
 class BlockQuote extends Component {
