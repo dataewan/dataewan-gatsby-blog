@@ -41,6 +41,6 @@
   },
   "devDependencies": {
     "html-loader": "^0.5.5",
-    "prettier": "^1.11.1"
+    "prettier": "1.15.2"
   }
 }
