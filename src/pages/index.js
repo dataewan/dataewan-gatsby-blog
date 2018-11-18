@@ -23,8 +23,11 @@ const IndexPage = () => (
     </Subsection>
     <Subsection name="Learning">
       <Paragraph>
-        Learning things from books and other sources.
+        Things that I've learned by reading.
       </Paragraph>
+      <Linktree>
+        <Linknode to='learning/statistics' desc='Statistics' />
+      </Linktree>
     </Subsection>
     <Subsection name="Investigating">
       <Paragraph>
