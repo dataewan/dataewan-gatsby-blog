@@ -1,16 +1,24 @@
 import React from "react";
-import Link from 'gatsby-link'
+import Link from "gatsby-link";
 
 import {
-  Paragraph, BlockQuote, Section, Subsection, Code, Figure,
-  Linknode, Linktree
-} from '../../../../../components'
+  Paragraph,
+  BlockQuote,
+  Section,
+  Subsection,
+  Code,
+  Figure,
+  Linknode,
+  Linktree,
+  Layout
+} from "../../../../../components";
 
 const MarginalProbability = () => (
-  <Section name="MarginalProbability">
-    <Paragraph>
-    </Paragraph>
-  </Section>
-)
+  <Layout>
+    <Section name="MarginalProbability">
+      <Paragraph />
+    </Section>
+  </Layout>
+);
 
 export default MarginalProbability;

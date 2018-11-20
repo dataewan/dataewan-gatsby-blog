@@ -9,13 +9,16 @@ import {
   Code,
   Figure,
   Linknode,
-  Linktree
+  Linktree,
+  Layout
 } from "../../components";
 
 const LearningIndexPage = () => (
-  <Linktree>
-    <Linknode to="learning/statistics" desc="Brushing up on my statistics" />
-  </Linktree>
+  <Layout>
+    <Linktree>
+      <Linknode to="learning/statistics" desc="Brushing up on my statistics" />
+    </Linktree>
+  </Layout>
 );
 
 export default LearningIndexPage;

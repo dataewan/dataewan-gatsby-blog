@@ -6,7 +6,7 @@ import Constants from "../../../../components/constants";
 const PartsOfEquation = () => (
   <div>
     <div style={{ backgroundColor: Constants.lightyellow }}>
-      <Link to="./bayesian-inference/likelihood">
+      <Link to="/learning/statistics/bayesian-inference/likelihood">
         <h3>Likelihood — p(data | θ) </h3>
         <p>
           Given our model, how likely is it that we would observe this data?
@@ -14,7 +14,7 @@ const PartsOfEquation = () => (
       </Link>
     </div>
     <div style={{ backgroundColor: Constants.lightblue }}>
-      <Link to="./bayesian-inference/prior">
+      <Link to="/learning/statistics/bayesian-inference/prior">
         <h3>Prior — p(θ) </h3>
         <p>
           Before doing the inference, describe what you think the parameters are
@@ -23,7 +23,7 @@ const PartsOfEquation = () => (
       </Link>
     </div>
     <div style={{ backgroundColor: Constants.lightgreen }}>
-      <Link to="./bayesian-inference/marginalprobability">
+      <Link to="/learning/statistics/bayesian-inference/marginalprobability">
         <h3>Marginal probability — p(data) </h3>
         <p>
           The denominator of Bayes rule. I've also seen this called the{" "}
@@ -32,7 +32,7 @@ const PartsOfEquation = () => (
       </Link>
     </div>
     <div style={{ backgroundColor: Constants.lightred }}>
-      <Link to="./bayesian-inference/posterior">
+      <Link to="/learning/statistics/bayesian-inference/posterior">
         <h3>Posterior — p(θ | data) </h3>
         <p>
           This is the thing that we're trying to calculate. What are the values
