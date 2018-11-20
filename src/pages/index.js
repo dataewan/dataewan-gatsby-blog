@@ -1,20 +1,23 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react";
+import { Link } from "gatsby";
 
 import {
-  Paragraph, BlockQuote, Section, Subsection, Code, Figure,
-  Linknode, Linktree
-} from '../components'
+  Paragraph,
+  BlockQuote,
+  Section,
+  Subsection,
+  Code,
+  Figure,
+  Linknode,
+  Linktree,
+  Layout
+} from "../components";
 
 const IndexPage = () => (
-  <Section name='Things I wish I could remember'>
-    <Paragraph>
-      Written record of things have been in my head,
-      but that have fallen out.
-    </Paragraph>
-    <Subsection name='Techniques'>
+  <Layout>
+    <Section name="Things I wish I could remember">
       <Paragraph>
-        Ways to do things.
+        Written record of things have been in my head, but that have fallen out.
       </Paragraph>
       <Linktree>
         <Linknode to='techniques/explaining-things' desc='Explaining things' />
@@ -48,4 +51,4 @@ const IndexPage = () => (
   </Section>
 )
 
-export default IndexPage
+export default IndexPage;

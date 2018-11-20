@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 
 import {
-  Section, Subsection, Subsubsection, Paragraph, Figure, Code, BlockQuote, Linktree, Linknode
+  Section, Subsection, Subsubsection, Paragraph, Figure, Code, BlockQuote, Linktree, Linknode, Layout
 }from "../../../../components"
 
 
@@ -9,6 +9,7 @@ class ComponentsPage extends Component {
 
   render() {
     return (
+      <Layout>
       <article>
 
         <Section name='Section component'>
@@ -167,6 +168,7 @@ def showtime(x):
           </BlockQuote>
         </Section>
       </article>
+    </Layout>
     );
   }
 }

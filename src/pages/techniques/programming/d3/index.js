@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  Section, Subsection, Paragraph, Figure, Code
+  Section, Subsection, Paragraph, Figure, Code, Layout
 } from '../../../../components'
 
 import data from './data.json'
@@ -21,6 +21,7 @@ class D3Index extends Component {
 
   render() {
     return (
+      <Layout>
       <article>
         <Section name='Making use of d3'>
           <Paragraph note={<a href='https://medium.com/@Elijah_Meeks/interactive-applications-with-react-d3-f76f7b3ebc71'>Elijah Meeks' post</a>}>
@@ -131,6 +132,7 @@ createChart(){
           </Paragraph>
         </Section>
       </article>
+    </Layout>
     );
   }
 }
