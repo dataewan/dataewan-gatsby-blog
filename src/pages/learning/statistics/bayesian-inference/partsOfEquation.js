@@ -5,7 +5,7 @@ import Constants from "../../../../components/constants";
 
 const PartsOfEquation = () => (
   <div>
-    <div style={{ backgroundColor: Constants.lightyellow }}>
+    <div style={{ border : `solid 5px ${Constants.lightyellow}`, padding : 10 }}>
       <Link to="/learning/statistics/bayesian-inference/likelihood">
         <h3>Likelihood — p(data | θ) </h3>
         <p>
@@ -13,7 +13,7 @@ const PartsOfEquation = () => (
         </p>
       </Link>
     </div>
-    <div style={{ backgroundColor: Constants.lightblue }}>
+    <div style={{ border : `solid 5px ${Constants.lightblue}`, padding : 10 }}>
       <Link to="/learning/statistics/bayesian-inference/prior">
         <h3>Prior — p(θ) </h3>
         <p>
@@ -22,7 +22,7 @@ const PartsOfEquation = () => (
         </p>
       </Link>
     </div>
-    <div style={{ backgroundColor: Constants.lightgreen }}>
+    <div style={{ border : `solid 5px ${Constants.lightgreen}`, padding : 10 }}>
       <Link to="/learning/statistics/bayesian-inference/evidence">
         <h3>Evidence — p(data) </h3>
         <p>
@@ -31,7 +31,7 @@ const PartsOfEquation = () => (
         </p>
       </Link>
     </div>
-    <div style={{ backgroundColor: Constants.lightred }}>
+    <div style={{ border : `solid 5px ${Constants.lightred}`, padding : 10 }}>
       <Link to="/learning/statistics/bayesian-inference/posterior">
         <h3>Posterior — p(θ | data) </h3>
         <p>
