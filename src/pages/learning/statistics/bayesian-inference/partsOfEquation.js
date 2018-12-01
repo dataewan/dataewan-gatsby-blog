@@ -23,11 +23,11 @@ const PartsOfEquation = () => (
       </Link>
     </div>
     <div style={{ backgroundColor: Constants.lightgreen }}>
-      <Link to="/learning/statistics/bayesian-inference/marginalprobability">
-        <h3>Marginal probability — p(data) </h3>
+      <Link to="/learning/statistics/bayesian-inference/evidence">
+        <h3>Evidence — p(data) </h3>
         <p>
           The denominator of Bayes rule. I've also seen this called the{" "}
-          <i>model evidence</i>.
+          <i>marginal probability</i>.
         </p>
       </Link>
     </div>
