@@ -16,7 +16,11 @@ import {
 const Posterior = () => (
   <Layout>
     <Section name="Posterior">
-      <Paragraph />
+      <Paragraph>
+        The posterior is the part that we're trying to get a value for.
+        Since we've observed this data and we have our model,
+        what are the parameters of the model that the data implies?
+      </Paragraph>
     </Section>
   </Layout>
 );

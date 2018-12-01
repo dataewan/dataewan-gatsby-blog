@@ -15,8 +15,10 @@ import {
 
 const MarginalProbability = () => (
   <Layout>
-    <Section name="MarginalProbability">
-      <Paragraph />
+    <Section name="Marginal Probability">
+      <Paragraph>
+        The marginal probability is the tricky bit and what makes bayesian inference more difficult.
+      </Paragraph>
     </Section>
   </Layout>
 );

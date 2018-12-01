@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import Helmet from "react-helmet";
 
 import "./layout.css";
+import "katex/dist/katex.min.css";
 
 import Constants from "../components/constants";
 
@@ -18,7 +19,6 @@ const header = () => (
       <Link to="/">
         <h1>dataewan</h1>
       </Link>
-      <link href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" rel="stylesheet" />
     </header>
   </div>
 );

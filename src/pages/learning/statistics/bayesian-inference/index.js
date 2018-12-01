@@ -33,6 +33,11 @@ const StatsIndexPage = () => (
         There are four parts to this equation.
         <PartsOfEquation />
       </Paragraph>
+      <Paragraph>
+        Bayes rule gives you a way to get from <i>p(data | θ)</i> to <i>p(θ | data)</i>,
+        flipping round the equation to give you the posterior.
+        An alternative way of thinking about it is that it gives you a way to update your beliefs when new data comes in.
+      </Paragraph>
     </Section>
   </Layout>
 );
