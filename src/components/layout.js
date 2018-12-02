@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import Helmet from "react-helmet";
 
 import "./layout.css";
+import "katex/dist/katex.min.css";
 
 import Constants from "../components/constants";
 

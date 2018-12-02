@@ -9,6 +9,7 @@ import Linktree from './Linktree'
 import Linknode from './Linknode'
 import RawHTML from './rawhtml'
 import Layout from './Layout'
+import Equation from './equation'
 
 export {
   BlockQuote,
@@ -22,4 +23,5 @@ export {
   Linknode,
   RawHTML,
   Layout,
+  Equation,
 }

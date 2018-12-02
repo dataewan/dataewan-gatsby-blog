@@ -20,7 +20,6 @@ const IndexPage = () => (
         Written record of things have been in my head, but that have fallen out.
       </Paragraph>
       <Subsection name="Techniques">
-        <Paragraph>Ways to do things.</Paragraph>
         <Linktree>
           <Linknode
             to="techniques/explaining-things"
@@ -30,7 +29,10 @@ const IndexPage = () => (
         </Linktree>
       </Subsection>
       <Subsection name="Learning">
-        <Paragraph>Learning things from books and other sources.</Paragraph>
+        <Paragraph>Things that I've learned by reading.</Paragraph>
+        <Linktree>
+          <Linknode to="learning/statistics" desc="Statistics" />
+        </Linktree>
       </Subsection>
       <Subsection name="Investigating">
         <Paragraph>Learning by applying techniques.</Paragraph>
