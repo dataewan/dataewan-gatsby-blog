@@ -38,14 +38,14 @@ const StatsIndexPage = () => (
         Bayes rule gives you a way to get from <i>p(data | θ)</i> to{" "}
         <i>p(θ | data)</i>, flipping round the equation to give you the
         posterior. An alternative way of thinking about it is that it gives you
-        a way to update your beliefs when new data comes in.
+        a way to update your beliefs after you observe new data.
       </Paragraph>
       <Paragraph>
         We go to a lot of hard work to calculate the posterior distribution,
         which is what the data tells you about the parameters of your model.
         From the posterior you can make summaries of your analysis to state the
         likely values of the parameters of the model, and you can also make
-        predictions from the posterior. It is pretty cool!
+        predictions from the posterior.
       </Paragraph>
       <Subsection name="Sampling to get the posterior">
         <Paragraph>

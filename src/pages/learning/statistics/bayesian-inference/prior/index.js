@@ -27,9 +27,10 @@ const Prior = () => (
         <Paragraph>
           You might think to take a look at the distribution of any historic
           data, and use that distribution to give you a prior distribution for
-          your parameters. Say for example you match the first statistical
-          moment (the mean) and the second statistical moment (the variance),
-          this is where the terminology <i>moment matching priors</i> comes
+          your parameters. Say for example you calculate the first statistical
+          moment (the mean) and the second statistical moment (the variance).
+          Why not use that for your prior?
+          This is where the terminology <i>moment matching priors</i> comes
           from.
         </Paragraph>
         <Paragraph>
