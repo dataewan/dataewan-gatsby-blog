@@ -10,12 +10,16 @@ import Constants from "../components/constants";
 
 import { rhythm } from "../utils/typography";
 
+import TwitterLogo from "./twitterlogo";
+import GithubLogo from "./githublogo";
+import LinkedinLogo from "./linkedinlogo";
+
 const header = () => (
   <div className="containerrow">
     <header className="content">
-      <a href="https://twitter.com/dataewan" className="twitterlink">
-        <img src="./twitter.png" alt="twitter link" width="25" />
-      </a>
+      <TwitterLogo />
+      <GithubLogo />
+      <LinkedinLogo />
       <Link to="/">
         <h1>dataewan</h1>
       </Link>
