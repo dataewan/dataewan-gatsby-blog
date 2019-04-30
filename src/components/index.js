@@ -5,10 +5,10 @@ import Paragraph from './paragraph'
 import Section from './section'
 import Subsection from './subsection'
 import Subsubsection from './subsubsection'
-import Linktree from './Linktree'
-import Linknode from './Linknode'
+import Linktree from './linktree'
+import Linknode from './linknode'
 import RawHTML from './rawhtml'
-import Layout from './Layout'
+import Layout from './layout'
 import Equation from './equation'
 
 export {
