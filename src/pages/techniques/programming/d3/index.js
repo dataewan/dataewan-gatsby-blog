@@ -7,7 +7,6 @@ import {
 
 import data from './data.json'
 
-import ReactAndD3 from './_ReactAndD3'
 import D3AsNormal from './_D3AsNormal';
 
 
@@ -40,9 +39,6 @@ class D3Index extends Component {
               You then give these drawing instructions to react.
               React handles the creating and updating of the DOM elements.
             </Paragraph>
-            <Figure caption="Using only react to draw the SVG that makes the chart">
-              <ReactAndD3 size={[500, 240]} data={this.state.data} />
-            </Figure>
             <Paragraph>
               The advantages of this method are that you get to take advantage of the react managment of the virtual DOM,
               so performance should be better.
